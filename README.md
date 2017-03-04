@@ -7,6 +7,7 @@ Running Node via Systemd is great way to automatically restart on fails, capture
 There are various sites that show how to setup Systemd with Node, but I haven't found a single tutorial on using Node with SELinux. Definitely no example files. Most people just say disable it, which is **a very bad idea**. SELinux is very important to securing an application.
 
 ### Assumptions
+##### You have the package `selinux-policy-devel` installed
 ##### These files are based the entry to the node js application living in `/var/www/node/process.js`. 
 That file name can be changed via find and replace, but it must be in `/var/www/*` for the files to work. I will make a script to make it easier
 ##### Must use `#!/usr/bin/env node` at the top of JS file and be executable
